@@ -16,7 +16,19 @@ public class MainActivity extends AppCompatActivity {
 
         EditText editText = (EditText) findViewById(R.id.editText);
 
+        String amountInDollars = editText.getText().toString();
+
         Log.i("Info", editText.getText().toString());
+
+        double amountInDollarsDouble = Double.parseDouble(amountInDollars);
+
+        double convertToReal = (amountInDollarsDouble * 5.11);
+
+        Toast.makeText
+                (
+                this,
+                "U$D " + amountInDollars + " is R$ " + convertToReal, Toast.LENGTH_LONG
+                ).show();
 
 
 
